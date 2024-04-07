@@ -1,0 +1,2213 @@
+; This is the Calva REPL Window.
+; It's just a file, really, with some special treatment from Calva.
+; Use it as a REPL input prompt if you like. (When the REPL is connected.)
+; TIPS: The keyboard shortcut `ctrl+alt+o r` shows and focuses this window
+; Please see https://calva.io/repl-window/ for more info.
+; Happy coding! ♥️
+
+; TIPS: As with any Clojure file when the REPL is connected:
+; - `alt+enter` evaluates the current top level form.
+; - `ctrl+enter` evaluates the current form.
+; Special for this file:
+; - `alt+up` and `alt+down` traverse up and down the REPL command history
+;    when the cursor is after the last contents at the prompt
+
+PLEASE NOTE
+We will update the default location of this file. 
+The new default location will be 
+  "<projectRootPath>/.calva/repl.calva-repl"
+For now the legacy path is used by default.
+To give yourself a smooth transition, you can opt in
+to the change, by configuring this setting as false: 
+  "calva.useLegacyReplWindowPath"
+and then add "**/.calva/repl.calva-repl" to your ".gitignore" file.
+
+
+This file is configured as the output destination for all REPL output.
+You can configure this with the setting:
+  "calva.outputDestinations"
+
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; Using host:port 127.0.0.1:53583 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉sql-playground.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉sql-playground.core꞉> 
+; Jack-in done.
+clj꞉sql-playground.core꞉> 
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\src\sql_playground\core.clj:16:57).
+; Unable to resolve symbol: uuid in this context
+clj꞉sql-playground.core꞉> 
+nil
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/uuid
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/courses
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/data
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/courses
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/courses
+clj꞉sql-playground.core꞉> 
+nil
+clj꞉sql-playground.core꞉> 
+nil
+clj꞉sql-playground.core꞉> 
+nil
+clj꞉sql-playground.contoh-sabda꞉> 
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\src\sql_playground\core.clj:12:11).
+; Unable to resolve symbol: db-spec in this context
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/db-spec
+clj꞉sql-playground.core꞉> 
+; Execution error (SQLException) at org.sqlite.Conn/<init> (Conn.java:49).
+; path to 'db/database.db': 'c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\db' does not exist
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/db-spec
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/conn
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/db-spec
+clj꞉sql-playground.core꞉> 
+"5f480ff0-f39c-11ee-a2c9-d44b4c04da0f"
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/uuid
+clj꞉sql-playground.core꞉> 
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\src\sql_playground\core.clj:20:3).
+; No such var: jdbc/get-datasource
+clj꞉sql-playground.core꞉> 
+nil
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/db
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/conn
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/conn
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/map-mainan
+clj꞉sql-playground.core꞉> 
+{:a "a"}
+clj꞉sql-playground.core꞉> 
+map-mainan
+{:a "a", :foo "foo"}
+clj꞉sql-playground.core꞉> 
+(dissoc map-mainan :foo)
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:106:1).
+; Unable to resolve symbol: mapmainan in this context
+clj꞉sql-playground.core꞉> 
+{:a "a"}
+clj꞉sql-playground.core꞉> 
+map-mainan
+{:a "a", :foo "foo"}
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/create-table
+clj꞉sql-playground.core꞉> 
+(create-table db "students" [[:fname :text] [:lname :text] [:city :text] [:id :text]])
+; batch entry 0: duplicate column name: id
+nil
+clj꞉sql-playground.core꞉> 
+db
+{:classname "org.sqlite.JDBC", :dbtype "sqlite", :dbname "resources/database.db"}
+clj꞉sql-playground.core꞉> 
+(create-table db "students" [[:fname :text] [:lname :text] [:city :text]])
+(0)
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/conn
+clj꞉sql-playground.core꞉> 
+conn
+#object[org.sqlite.Conn 0x63e638ba "org.sqlite.Conn@63e638ba"]
+clj꞉sql-playground.core꞉> 
+(create-table db "students" [[:fname :text] [:lname :text] [:city :text]])
+; batch entry 0: table students already exists
+nil
+clj꞉sql-playground.core꞉> 
+(jbdc/insert-many! db "students" data)
+clj꞉sql-playground.core꞉> 
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:136:1).
+; No such namespace: jbdc
+clj꞉sql-playground.core꞉> 
+(jdbc/insert-many! db "students" data)
+
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:141:1).
+; No such var: jdbc/insert-many!
+clj꞉sql-playground.core꞉> 
+nil
+clj꞉sql-playground.core꞉> 
+(jdbc/insert-many! db "students" data)
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:148:1).
+; No such var: jdbc/insert-many!
+clj꞉sql-playground.core꞉> 
+(jdbc/insert-multi! db "students" data)
+({:last_insert_rowid() 1}
+ {:last_insert_rowid() 2}
+ {:last_insert_rowid() 3}
+ {:last_insert_rowid() 4}
+ {:last_insert_rowid() 5}
+ {:last_insert_rowid() 6}
+ {:last_insert_rowid() 7}
+ {:last_insert_rowid() 8}
+ {:last_insert_rowid() 9}
+ {:last_insert_rowid() 10}
+ {:last_insert_rowid() 11}
+ {:last_insert_rowid() 12}
+ {:last_insert_rowid() 13}
+ {:last_insert_rowid() 14}
+ {:last_insert_rowid() 15}
+ {:last_insert_rowid() 16}
+ {:last_insert_rowid() 17}
+ {:last_insert_rowid() 18}
+ {:last_insert_rowid() 19}
+ {:last_insert_rowid() 20}
+ {:last_insert_rowid() 21}
+ {:last_insert_rowid() 22}
+ {:last_insert_rowid() 23}
+ {:last_insert_rowid() 24}
+ {:last_insert_rowid() 25}
+ {:last_insert_rowid() 26}
+ {:last_insert_rowid() 27}
+ {:last_insert_rowid() 28}
+ {:last_insert_rowid() 29}
+ {:last_insert_rowid() 30})
+clj꞉sql-playground.core꞉> 
+db
+{:classname "org.sqlite.JDBC", :dbtype "sqlite", :dbname "resources/database.db"}
+clj꞉sql-playground.core꞉> 
+(jdbc/format-query "SELECT * FROM students")
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:187:1).
+; No such var: jdbc/format-query
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["SELECT * FROM students"])
+({:id "7f694ad0-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Gutenstag", :city "Lualua"}
+ {:id "7f6971e0-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Gutenstag", :city "Wakanda"}
+ {:id "7f6971e1-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Gutenstag", :city "Forever"}
+ {:id "7f6971e2-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Gutenstag", :city "Forever"}
+ {:id "7f6971e3-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Gutenstag", :city "Forever"}
+ {:id "7f6998f0-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Gutenstag", :city "Cikujang"}
+ {:id "7f6998f1-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Walker", :city "Wakanda"}
+ {:id "7f6998f2-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Jaeger", :city "Lualua"}
+ {:id "7f6998f3-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Vibe", :city "Cikujang"}
+ {:id "7f6998f4-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Walker", :city "Forever"}
+ {:id "7f6998f5-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Jaeger", :city "Forever"}
+ {:id "7f6998f6-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Gutenstag", :city "Cikujang"}
+ {:id "7f6998f7-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Vibe", :city "Forever"}
+ {:id "7f6998f8-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Daniels", :city "Forever"}
+ {:id "7f6998f9-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Jaeger", :city "Wakanda"}
+ {:id "7f6998fa-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Daniels", :city "Cikujang"}
+ {:id "7f6998fb-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Vibe", :city "Wakanda"}
+ {:id "7f6998fc-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Gutenstag", :city "Lualua"}
+ {:id "7f6998fd-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Daniels", :city "Wakanda"}
+ {:id "7f6998fe-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Daniels", :city "Lualua"}
+ {:id "7f6998ff-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Walker", :city "Cikujang"}
+ {:id "7f699900-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Gutenstag", :city "Cikujang"}
+ {:id "7f699901-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Gutenstag", :city "Forever"}
+ {:id "7f699902-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Walker", :city "Wakanda"}
+ {:id "7f699903-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Walker", :city "Wakanda"}
+ {:id "7f699904-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Jaeger", :city "Lualua"}
+ {:id "7f699905-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Jaeger", :city "Lualua"}
+ {:id "7f699906-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Daniels", :city "Forever"}
+ {:id "7f699907-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Gutenstag", :city "Forever"}
+ {:id "7f69c000-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Gutenstag", :city "Lualua"})
+clj꞉sql-playground.core꞉> 
+(create-table db "courses" )#'sql-playground.core/courses
+clj꞉sql-playground.core꞉> 
+(create-table db "courses" [[:name :text]
+                            [:code :integer]
+                            [:id :text]])#'sql-playground.core/courses
+clj꞉sql-playground.core꞉> 
+(create-table db "courses" [[:name :text]
+                            [:code :integer]
+                            [:id :text]])
+; batch entry 0: duplicate column name: id
+nil
+clj꞉sql-playground.core꞉> 
+(jdbc/insert-multi! db "courses" courses)
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; no such table: courses
+clj꞉sql-playground.core꞉> 
+(create-table db "courses" [[:name :text]
+                            [:code :integer]])
+(0)
+clj꞉sql-playground.core꞉> 
+(jdbc/insert-multi! db "courses" courses)
+({:last_insert_rowid() 1}
+ {:last_insert_rowid() 2}
+ {:last_insert_rowid() 3}
+ {:last_insert_rowid() 4}
+ {:last_insert_rowid() 5}
+ {:last_insert_rowid() 6}
+ {:last_insert_rowid() 7}
+ {:last_insert_rowid() 8}
+ {:last_insert_rowid() 9}
+ {:last_insert_rowid() 10}
+ {:last_insert_rowid() 11}
+ {:last_insert_rowid() 12}
+ {:last_insert_rowid() 13}
+ {:last_insert_rowid() 14}
+ {:last_insert_rowid() 15}
+ {:last_insert_rowid() 16}
+ {:last_insert_rowid() 17}
+ {:last_insert_rowid() 18}
+ {:last_insert_rowid() 19}
+ {:last_insert_rowid() 20})
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["SELECT * FROM courses"])
+({:id "91346db0-f3b0-11ee-a2c9-d44b4c04da0f", :name "AdvancedComp Science", :code 0}
+ {:id "91346db1-f3b0-11ee-a2c9-d44b4c04da0f", :name "Intro to Physics", :code 1}
+ {:id "91346db2-f3b0-11ee-a2c9-d44b4c04da0f", :name "Intermediate Anthropology", :code 2}
+ {:id "91346db3-f3b0-11ee-a2c9-d44b4c04da0f", :name "AdvancedAnthropology", :code 3}
+ {:id "91346db4-f3b0-11ee-a2c9-d44b4c04da0f", :name "AdvancedPhysics", :code 4}
+ {:id "91346db5-f3b0-11ee-a2c9-d44b4c04da0f", :name "AdvancedMathematics", :code 5}
+ {:id "91346db6-f3b0-11ee-a2c9-d44b4c04da0f", :name "AdvancedAnthropology", :code 6}
+ {:id "91346db7-f3b0-11ee-a2c9-d44b4c04da0f", :name "Beginning Comp Science", :code 7}
+ {:id "91346db8-f3b0-11ee-a2c9-d44b4c04da0f", :name "Intro to Physics", :code 8}
+ {:id "91346db9-f3b0-11ee-a2c9-d44b4c04da0f", :name "Intro to Anthropology", :code 9}
+ {:id "91346dba-f3b0-11ee-a2c9-d44b4c04da0f", :name "Beginning Mathematics", :code 10}
+ {:id "91346dbb-f3b0-11ee-a2c9-d44b4c04da0f", :name "Beginning Comp Science", :code 11}
+ {:id "91346dbc-f3b0-11ee-a2c9-d44b4c04da0f", :name "AdvancedAnthropology", :code 12}
+ {:id "91346dbd-f3b0-11ee-a2c9-d44b4c04da0f", :name "AdvancedMathematics", :code 13}
+ {:id "91346dbe-f3b0-11ee-a2c9-d44b4c04da0f", :name "Intermediate Physics", :code 14}
+ {:id "91346dbf-f3b0-11ee-a2c9-d44b4c04da0f", :name "Beginning Mathematics", :code 15}
+ {:id "91346dc0-f3b0-11ee-a2c9-d44b4c04da0f", :name "Beginning Anthropology", :code 16}
+ {:id "91346dc1-f3b0-11ee-a2c9-d44b4c04da0f", :name "Beginning Anthropology", :code 17}
+ {:id "913494c0-f3b0-11ee-a2c9-d44b4c04da0f", :name "Intro to Physics", :code 18}
+ {:id "913494c1-f3b0-11ee-a2c9-d44b4c04da0f", :name "Beginning Comp Science", :code 19})
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["SELECT * FROM courses WHERE name is 'Intro to Physics"])
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; unrecognized token: "'Intro to Physics"
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["SELECT * FROM courses WHERE name is 'Intro to Physics'"])
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "'Intro to Physics'": syntax error
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["SELECT * FROM courses WHERE name is 'Intro to Physics'"])
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:295:1).
+; Unable to resolve symbol: Intro in this context
+clj꞉sql-playground.core꞉> 
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "'Intro to Physics'": syntax error
+clj꞉sql-playground.core꞉> 
+(jdbc/query db [".database_list"])
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near ".": syntax error
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["tables"])
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "tables": syntax error
+clj꞉sql-playground.core꞉> 
+(jbd/query db ["SELECT name FROM sqlite_master WHERE type='table'"])
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:310:1).
+; No such namespace: jbd
+clj꞉sql-playground.core꞉> 
+(jbdc/query db ["SELECT name FROM sqlite_master WHERE type='table'"])
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:314:1).
+; No such namespace: jbdc
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["SELECT name FROM sqlite_master WHERE type='table'"])
+({:name "students"} {:name "courses"})
+clj꞉sql-playground.core꞉> 
+conn
+#object[org.sqlite.Conn 0x63e638ba "org.sqlite.Conn@63e638ba"]
+clj꞉sql-playground.core꞉> 
+db
+{:classname "org.sqlite.JDBC", :dbtype "sqlite", :dbname "resources/database.db"}
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["SELECT * FROM students"])
+({:id "7f694ad0-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Gutenstag", :city "Lualua"}
+ {:id "7f6971e0-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Gutenstag", :city "Wakanda"}
+ {:id "7f6971e1-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Gutenstag", :city "Forever"}
+ {:id "7f6971e2-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Gutenstag", :city "Forever"}
+ {:id "7f6971e3-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Gutenstag", :city "Forever"}
+ {:id "7f6998f0-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Gutenstag", :city "Cikujang"}
+ {:id "7f6998f1-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Walker", :city "Wakanda"}
+ {:id "7f6998f2-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Jaeger", :city "Lualua"}
+ {:id "7f6998f3-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Vibe", :city "Cikujang"}
+ {:id "7f6998f4-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Walker", :city "Forever"}
+ {:id "7f6998f5-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Jaeger", :city "Forever"}
+ {:id "7f6998f6-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Gutenstag", :city "Cikujang"}
+ {:id "7f6998f7-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Vibe", :city "Forever"}
+ {:id "7f6998f8-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Daniels", :city "Forever"}
+ {:id "7f6998f9-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Jaeger", :city "Wakanda"}
+ {:id "7f6998fa-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Daniels", :city "Cikujang"}
+ {:id "7f6998fb-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Vibe", :city "Wakanda"}
+ {:id "7f6998fc-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Gutenstag", :city "Lualua"}
+ {:id "7f6998fd-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Daniels", :city "Wakanda"}
+ {:id "7f6998fe-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Daniels", :city "Lualua"}
+ {:id "7f6998ff-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Walker", :city "Cikujang"}
+ {:id "7f699900-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Gutenstag", :city "Cikujang"}
+ {:id "7f699901-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Gutenstag", :city "Forever"}
+ {:id "7f699902-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Walker", :city "Wakanda"}
+ {:id "7f699903-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Walker", :city "Wakanda"}
+ {:id "7f699904-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Jaeger", :city "Lualua"}
+ {:id "7f699905-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Jaeger", :city "Lualua"}
+ {:id "7f699906-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Daniels", :city "Forever"}
+ {:id "7f699907-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Gutenstag", :city "Forever"}
+ {:id "7f69c000-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Gutenstag", :city "Lualua"})
+clj꞉sql-playground.core꞉> 
+(jdbc/delete! db "students")
+; Execution error (ArityException) at sql-playground.core/eval11399 (form-init2824694065351499438.clj:359).
+; Wrong number of args (2) passed to: clojure.java.jdbc/delete!
+clj꞉sql-playground.core꞉> 
+; Execution error (ArityException) at sql-playground.core/eval11401 (form-init2824694065351499438.clj:359).
+; Wrong number of args (2) passed to: clojure.java.jdbc/delete!
+clj꞉sql-playground.core꞉> 
+(jdbc/delete! db "students")#'sql-playground.core/delete-all
+clj꞉sql-playground.core꞉> 
+(delete-all)#'sql-playground.core/delete-all-from-table
+clj꞉sql-playground.core꞉> 
+(delete-all-from-table db "students")
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "?": syntax error
+clj꞉sql-playground.core꞉> 
+(delete-all-from-table db :students)
+[30]
+clj꞉sql-playground.core꞉> 
+(delete-all-from-table db :courses)
+[20]
+clj꞉sql-playground.core꞉> 
+(jdbc/)(jdbc/query db ["SELECT name FROM sqlite_master WHERE type='table'"])
+({:name "students"} {:name "courses"})
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["SELECT name FROM sqlite_master WHERE type='table'"])
+({:name "students"} {:name "courses"})
+clj꞉sql-playground.core꞉> 
+{:delete [:students :courses]}
+clj꞉sql-playground.core꞉> 
+(jdbc/execute! db {:delete [:students :courses]})
+; Execution error (ClassCastException) at clojure.java.jdbc/prepare-statement (jdbc.clj:645).
+; class clojure.lang.MapEntry cannot be cast to class java.lang.String (clojure.lang.MapEntry is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap')
+clj꞉sql-playground.core꞉> 
+(jdbc/query db [SELECT * FROM 'students'])
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:392:1).
+; Unable to resolve symbol: SELECT in this context
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["SELECT * FROM 'students'"])
+()
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/drop-table
+clj꞉sql-playground.core꞉> 
+(drop-table db "students")
+; Execution error (ArityException) at sql-playground.core/eval11423 (form-init2824694065351499438.clj:401).
+; Wrong number of args (2) passed to: sql-playground.core/drop-table
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/drop-table
+clj꞉sql-playground.core꞉> 
+(drop-table db "students")
+[0]
+clj꞉sql-playground.core꞉> 
+(drop-table db "courses")
+[0]
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["SELECT name FROM sqlite_master WHERE type='table'"])
+()
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/skill-spec
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/skill-group-spec
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/skill-group-spec
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/skill-group-spec
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/skill-spec
+clj꞉sql-playground.core꞉> 
+(create-table db "skill-group" skill-group-spec)
+; batch entry 0: near "-": syntax error
+nil
+clj꞉sql-playground.core꞉> 
+(create-table db "skill-group" skill-group-spec)
+; batch entry 0: near "-": syntax error
+nil
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["SELECT * FROM 'skill-group'"])
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "-": syntax error
+clj꞉sql-playground.core꞉> 
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; no such table: skill-group
+clj꞉sql-playground.core꞉> 
+(create-table db :skillgroup skill-group-spec)
+(0)
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["SELECT * FROM 'skillgroup'"])
+()
+clj꞉sql-playground.core꞉> 
+(create-table db :skill skill-spec)
+(0)
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["SELECT * FROM 'skill'"])
+()
+clj꞉sql-playground.core꞉> 
+(jdbc/query db ["SELECT name FROM sqlite_master WHERE type='table'"])
+({:name "skillgroup"} {:name "skill"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/see-all-table
+clj꞉sql-playground.core꞉> 
+see-all-table
+#function[sql-playground.core/see-all-table]
+clj꞉sql-playground.core꞉> 
+(see-all-table)
+({:type "table",
+  :name "skillgroup",
+  :tbl_name "skillgroup",
+  :rootpage 2,
+  :sql "CREATE TABLE skillgroup (id text, sg_id text, name text, level integer)"}
+ {:type "table",
+  :name "skill",
+  :tbl_name "skill",
+  :rootpage 4,
+  :sql "CREATE TABLE skill (id text, skill_id text, name text)"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/skill-spec
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/skill-sg-relations
+clj꞉sql-playground.core꞉> 
+(create-table db "skill-sg-relations" skill-sg-relations)#'sql-playground.core/skill-sg-relations-spec
+clj꞉sql-playground.core꞉> 
+(create-table db :skill-sg-relation-spec skill-sg-relations-spec)
+; batch entry 0: near "-": syntax error
+nil
+clj꞉sql-playground.core꞉> 
+(create-table db :skill-sg-relation-spec skill-sg-relations-spec)
+; batch entry 0: near "-": syntax error
+nil
+clj꞉sql-playground.core꞉> 
+(see-all-table)
+({:type "table",
+  :name "skillgroup",
+  :tbl_name "skillgroup",
+  :rootpage 2,
+  :sql "CREATE TABLE skillgroup (id text, sg_id text, name text, level integer)"}
+ {:type "table",
+  :name "skill",
+  :tbl_name "skill",
+  :rootpage 4,
+  :sql "CREATE TABLE skill (id text, skill_id text, name text)"})
+clj꞉sql-playground.core꞉> 
+(create-table db :skill_sg_relation skill-sg-relations-spec)
+(0)
+clj꞉sql-playground.core꞉> 
+(see-all-table)
+({:type "table",
+  :name "skillgroup",
+  :tbl_name "skillgroup",
+  :rootpage 2,
+  :sql "CREATE TABLE skillgroup (id text, sg_id text, name text, level integer)"}
+ {:type "table",
+  :name "skill",
+  :tbl_name "skill",
+  :rootpage 4,
+  :sql "CREATE TABLE skill (id text, skill_id text, name text)"}
+ {:type "table",
+  :name "skill_sg_relation",
+  :tbl_name "skill_sg_relation",
+  :rootpage 5,
+  :sql "CREATE TABLE skill_sg_relation (id text, sg_id text, skill_id text)"})
+clj꞉sql-playground.core꞉> 
+{:test1 (uuid)
+ :test2 (uuid)}
+{:test1 "fe18a3a0-f451-11ee-a2c9-d44b4c04da0f", :test2 "fe198e00-f451-11ee-a2c9-d44b4c04da0f"}
+clj꞉sql-playground.core꞉> 
+nil
+clj꞉sql-playground.spec꞉> 
+#'sql-playground.spec/skill-sg-relations-spec
+clj꞉sql-playground.spec꞉> 
+#'sql-playground.spec/skill-spec
+clj꞉sql-playground.spec꞉> 
+#'sql-playground.spec/skill-group-spec
+clj꞉sql-playground.spec꞉> 
+nil
+clj꞉sql-playground.core꞉> 
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\src\sql_playground\core.clj:33:18).
+; No such var: sql/select-from
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/read-table
+clj꞉sql-playground.core꞉> 
+(read-table db skill-sg-relations)
+; Execution error (IllegalArgumentException) at clojure.java.jdbc/query (jdbc.clj:1167).
+; "sql-params" expected vector [sql param*], found clojure.lang.MapEntry [:select [[:*]]]
+clj꞉sql-playground.core꞉> 
+(read-table db :skill_sg_relation)
+; Execution error (IllegalArgumentException) at clojure.java.jdbc/query (jdbc.clj:1167).
+; "sql-params" expected vector [sql param*], found clojure.lang.MapEntry [:select [[:*]]]
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/read-table
+clj꞉sql-playground.core꞉> 
+(read-table db :skill_sg_relation)
+; Execution error (IllegalArgumentException) at clojure.java.jdbc/query (jdbc.clj:1167).
+; "sql-params" expected vector [sql param*], found clojure.lang.MapEntry [:select [[:*]]]
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/read-table
+clj꞉sql-playground.core꞉> 
+(read-table db :skill_sg_relation)
+()
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/delete-all-from-table
+clj꞉sql-playground.core꞉> 
+(jbdc)#'sql-playground.core/read-all-table
+clj꞉sql-playground.core꞉> 
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "?": syntax error
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/read-all-table
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/read-all-table
+clj꞉sql-playground.core꞉> 
+(read-all-table)
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "?": syntax error
+clj꞉sql-playground.core꞉> 
+(drop-table db :skill_sg_relation)
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near ":skill_sg_relation": syntax error
+clj꞉sql-playground.core꞉> 
+(drop-table db "skill_sg_relation")
+[0]
+clj꞉sql-playground.core꞉> 
+(drop-table db "skillgroup")
+[0]
+clj꞉sql-playground.core꞉> 
+(drop-table db "skill")
+[0]
+[0]
+clj꞉sql-playground.core꞉> 
+(see-all-table)
+({:type "table",
+  :name "skill",
+  :tbl_name "skill",
+  :rootpage 4,
+  :sql "CREATE TABLE skill (id text, skill_id text, name text)"})
+clj꞉sql-playground.core꞉> 
+(droptable db "skill")
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:593:1).
+; Unable to resolve symbol: droptable in this context
+clj꞉sql-playground.core꞉> 
+(drop-table db "skill")
+[0]
+clj꞉sql-playground.core꞉> 
+(see-all-table)
+()
+clj꞉sql-playground.core꞉> 
+()#'sql-playground.core/read-all-table
+clj꞉sql-playground.core꞉> 
+(read-all-table)
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "?": syntax error
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/drop-table
+clj꞉sql-playground.core꞉> 
+(create-table db "test" spec/skill-spec)
+(0)
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/drop-table
+clj꞉sql-playground.core꞉> 
+(drop-table db "test")
+
+; Execution error (ExceptionInfo) at honey.sql/format-ddl-options$iter$fn$fn (sql.cljc:1211).
+; expected symbol or keyword
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/drop-table
+clj꞉sql-playground.core꞉> 
+(drop-table db "test")
+; Execution error (ClassCastException) at clojure.java.jdbc/prepare-statement (jdbc.clj:645).
+; class clojure.lang.MapEntry cannot be cast to class java.lang.String (clojure.lang.MapEntry is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap')
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/drop-table
+clj꞉sql-playground.core꞉> 
+(drop-table db :test)
+[0]
+clj꞉sql-playground.core꞉> 
+(read-all-table)
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "?": syntax error
+clj꞉sql-playground.core꞉> 
+(see-all-table)
+()
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/read-all-table
+clj꞉sql-playground.core꞉> 
+(read-all-table)
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "==": syntax error
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/read-all-table
+clj꞉sql-playground.core꞉> 
+(read-all-table)
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "table": syntax error
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/read-all-table
+clj꞉sql-playground.core꞉> 
+(read-all-table)
+()
+clj꞉sql-playground.core꞉> 
+(create-table db "test" spec/skill-spec)
+(0)
+clj꞉sql-playground.core꞉> 
+data
+({:fname "Kahlua", :lname "Gutenstag", :city "Lualua", :id "7f694ad0-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Kahlua", :lname "Gutenstag", :city "Wakanda", :id "7f6971e0-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Jack", :lname "Gutenstag", :city "Forever", :id "7f6971e1-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Jack", :lname "Gutenstag", :city "Forever", :id "7f6971e2-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Jack", :lname "Gutenstag", :city "Forever", :id "7f6971e3-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Captain", :lname "Gutenstag", :city "Cikujang", :id "7f6998f0-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Johny", :lname "Walker", :city "Wakanda", :id "7f6998f1-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Johny", :lname "Jaeger", :city "Lualua", :id "7f6998f2-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Captain", :lname "Vibe", :city "Cikujang", :id "7f6998f3-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Captain", :lname "Walker", :city "Forever", :id "7f6998f4-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Jack", :lname "Jaeger", :city "Forever", :id "7f6998f5-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Johny", :lname "Gutenstag", :city "Cikujang", :id "7f6998f6-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Johny", :lname "Vibe", :city "Forever", :id "7f6998f7-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Jack", :lname "Daniels", :city "Forever", :id "7f6998f8-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Captain", :lname "Jaeger", :city "Wakanda", :id "7f6998f9-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Kahlua", :lname "Daniels", :city "Cikujang", :id "7f6998fa-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Johny", :lname "Vibe", :city "Wakanda", :id "7f6998fb-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Captain", :lname "Gutenstag", :city "Lualua", :id "7f6998fc-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Kahlua", :lname "Daniels", :city "Wakanda", :id "7f6998fd-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Kahlua", :lname "Daniels", :city "Lualua", :id "7f6998fe-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Jack", :lname "Walker", :city "Cikujang", :id "7f6998ff-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Johny", :lname "Gutenstag", :city "Cikujang", :id "7f699900-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Kahlua", :lname "Gutenstag", :city "Forever", :id "7f699901-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Johny", :lname "Walker", :city "Wakanda", :id "7f699902-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Johny", :lname "Walker", :city "Wakanda", :id "7f699903-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Captain", :lname "Jaeger", :city "Lualua", :id "7f699904-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Johny", :lname "Jaeger", :city "Lualua", :id "7f699905-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Johny", :lname "Daniels", :city "Forever", :id "7f699906-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Kahlua", :lname "Gutenstag", :city "Forever", :id "7f699907-f3ae-11ee-a2c9-d44b4c04da0f"}
+ {:fname "Johny", :lname "Gutenstag", :city "Lualua", :id "7f69c000-f3ae-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(create-table db "students" data)
+; column spec is not a sequence of keywords / strings
+nil
+clj꞉sql-playground.core꞉> 
+(create-table db "students" [[:fname :text] [:lname :text] [:city :text]])
+(0)
+clj꞉sql-playground.core꞉> 
+(jdbc/insert-multi! db "students" data)
+({:last_insert_rowid() 1}
+ {:last_insert_rowid() 2}
+ {:last_insert_rowid() 3}
+ {:last_insert_rowid() 4}
+ {:last_insert_rowid() 5}
+ {:last_insert_rowid() 6}
+ {:last_insert_rowid() 7}
+ {:last_insert_rowid() 8}
+ {:last_insert_rowid() 9}
+ {:last_insert_rowid() 10}
+ {:last_insert_rowid() 11}
+ {:last_insert_rowid() 12}
+ {:last_insert_rowid() 13}
+ {:last_insert_rowid() 14}
+ {:last_insert_rowid() 15}
+ {:last_insert_rowid() 16}
+ {:last_insert_rowid() 17}
+ {:last_insert_rowid() 18}
+ {:last_insert_rowid() 19}
+ {:last_insert_rowid() 20}
+ {:last_insert_rowid() 21}
+ {:last_insert_rowid() 22}
+ {:last_insert_rowid() 23}
+ {:last_insert_rowid() 24}
+ {:last_insert_rowid() 25}
+ {:last_insert_rowid() 26}
+ {:last_insert_rowid() 27}
+ {:last_insert_rowid() 28}
+ {:last_insert_rowid() 29}
+ {:last_insert_rowid() 30})
+clj꞉sql-playground.core꞉> 
+(read-all-table)
+({:type "table",
+  :name "test",
+  :tbl_name "test",
+  :rootpage 2,
+  :sql "CREATE TABLE test (id text, skill_id text, name text)"}
+ {:type "table",
+  :name "students",
+  :tbl_name "students",
+  :rootpage 4,
+  :sql "CREATE TABLE students (id text, fname text, lname text, city text)"})
+clj꞉sql-playground.core꞉> 
+(read-table db :students)
+({:id "7f694ad0-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Gutenstag", :city "Lualua"}
+ {:id "7f6971e0-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Gutenstag", :city "Wakanda"}
+ {:id "7f6971e1-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Gutenstag", :city "Forever"}
+ {:id "7f6971e2-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Gutenstag", :city "Forever"}
+ {:id "7f6971e3-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Gutenstag", :city "Forever"}
+ {:id "7f6998f0-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Gutenstag", :city "Cikujang"}
+ {:id "7f6998f1-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Walker", :city "Wakanda"}
+ {:id "7f6998f2-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Jaeger", :city "Lualua"}
+ {:id "7f6998f3-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Vibe", :city "Cikujang"}
+ {:id "7f6998f4-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Walker", :city "Forever"}
+ {:id "7f6998f5-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Jaeger", :city "Forever"}
+ {:id "7f6998f6-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Gutenstag", :city "Cikujang"}
+ {:id "7f6998f7-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Vibe", :city "Forever"}
+ {:id "7f6998f8-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Daniels", :city "Forever"}
+ {:id "7f6998f9-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Jaeger", :city "Wakanda"}
+ {:id "7f6998fa-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Daniels", :city "Cikujang"}
+ {:id "7f6998fb-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Vibe", :city "Wakanda"}
+ {:id "7f6998fc-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Gutenstag", :city "Lualua"}
+ {:id "7f6998fd-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Daniels", :city "Wakanda"}
+ {:id "7f6998fe-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Daniels", :city "Lualua"}
+ {:id "7f6998ff-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Jack", :lname "Walker", :city "Cikujang"}
+ {:id "7f699900-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Gutenstag", :city "Cikujang"}
+ {:id "7f699901-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Gutenstag", :city "Forever"}
+ {:id "7f699902-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Walker", :city "Wakanda"}
+ {:id "7f699903-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Walker", :city "Wakanda"}
+ {:id "7f699904-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Captain", :lname "Jaeger", :city "Lualua"}
+ {:id "7f699905-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Jaeger", :city "Lualua"}
+ {:id "7f699906-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Daniels", :city "Forever"}
+ {:id "7f699907-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Kahlua", :lname "Gutenstag", :city "Forever"}
+ {:id "7f69c000-f3ae-11ee-a2c9-d44b4c04da0f", :fname "Johny", :lname "Gutenstag", :city "Lualua"})
+clj꞉sql-playground.core꞉> 
+(jdbc/query )#'sql-playground.spec/skill-group-spec
+clj꞉sql-playground.spec꞉> 
+#'sql-playground.spec/skill-group-spec
+clj꞉sql-playground.spec꞉> 
+#'sql-playground.spec/skill-sg-relations-spec
+clj꞉sql-playground.spec꞉> 
+#'sql-playground.spec/skill-spec
+clj꞉sql-playground.spec꞉> 
+(read-all-table)
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:782:1).
+; Unable to resolve symbol: read-all-table in this context
+clj꞉sql-playground.spec꞉> 
+#'sql-playground.core/read-all-table
+clj꞉sql-playground.core꞉> 
+({:type "table",
+  :name "test",
+  :tbl_name "test",
+  :rootpage 2,
+  :sql "CREATE TABLE test (id text, skill_id text, name text)"}
+ {:type "table",
+  :name "students",
+  :tbl_name "students",
+  :rootpage 4,
+  :sql "CREATE TABLE students (id text, fname text, lname text, city text)"})
+clj꞉sql-playground.core꞉> 
+(drop-table db "students")
+; Execution error (ExceptionInfo) at honey.sql/format-ddl-options$iter$fn$fn (sql.cljc:1211).
+; expected symbol or keyword
+clj꞉sql-playground.core꞉> 
+(drop-table db :students)
+[0]
+clj꞉sql-playground.core꞉> 
+(drop-table db :test)
+[0]
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/create-table
+clj꞉sql-playground.core꞉> 
+(create-table db "skills" spec/skill-spec)
+; Wrong number of args (1) passed to: clojure.java.jdbc/create-table-ddl
+nil
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/create-table
+clj꞉sql-playground.core꞉> 
+(0)
+clj꞉sql-playground.core꞉> 
+(create-table db "skill-group" spec/skill-group-spec)
+; batch entry 0: near "-": syntax error
+nil
+clj꞉sql-playground.core꞉> 
+; batch entry 0: near "-": syntax error
+nil
+clj꞉sql-playground.core꞉> 
+(read-all-table)
+({:type "table",
+  :name "skills",
+  :tbl_name "skills",
+  :rootpage 2,
+  :sql "CREATE TABLE skills (skill_id text, name text)"})
+clj꞉sql-playground.core꞉> 
+(create-table db :skillGroup spec/skill-group-spec)
+(0)
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/add-child
+clj꞉sql-playground.core꞉> 
+(add-child nil :root)
+; Execution error (ExceptionInfo) at honey.sql/format-values (sql.cljc:1090).
+; :values expects a sequence of rows (maps) or column values (sequences)
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/add-child
+clj꞉sql-playground.core꞉> 
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; no such column: root
+clj꞉sql-playground.core꞉> 
+(read-all-table)
+({:type "table",
+  :name "skills",
+  :tbl_name "skills",
+  :rootpage 2,
+  :sql "CREATE TABLE skills (skill_id text, name text)"}
+ {:type "table",
+  :name "skillGroup",
+  :tbl_name "skillGroup",
+  :rootpage 4,
+  :sql "CREATE TABLE skillGroup (sg_id text, name text, parent_id text)"})
+clj꞉sql-playground.core꞉> 
+(add-child nil "root")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table db skillGroup)
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:862:1).
+; Unable to resolve symbol: skillGroup in this context
+clj꞉sql-playground.core꞉> 
+(read-table db :skillGroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil})
+clj꞉sql-playground.core꞉> 
+(add-child "864abb40-f4d5-11ee-a2c9-d44b4c04da0f" "Fundamental Skill")
+(1)
+clj꞉sql-playground.core꞉> 
+(add-child "864abb40-f4d5-11ee-a2c9-d44b4c04da0f" "Specific Skill")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table db :skillGroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/add-sg
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/read-table
+clj꞉sql-playground.core꞉> 
+(filter #(= (:sg_id %) "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f") ({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+                                                                {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+                                                                 :name "Fundamental Skill",
+                                                                 :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+                                                                {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+                                                                 :name "Specific Skill",
+                                                                 :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"})
+)
+()
+clj꞉sql-playground.core꞉> 
+()
+clj꞉sql-playground.core꞉> 
+(type (read-table :skillGroup))
+; Execution error (ArityException) at sql-playground.core/eval11666 (form-init2824694065351499438.clj:900).
+; Wrong number of args (2) passed to: sql-playground.core/read-table
+clj꞉sql-playground.core꞉> 
+clojure.lang.LazySeq
+clj꞉sql-playground.core꞉> 
+()
+clj꞉sql-playground.core꞉> 
+nil
+clj꞉sql-playground.core꞉> 
+(read-table :skillGroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(filter #(= (:sg_id %) "864abb40-f4d5-11ee-a2c9-d44b4c04da0f") (read-table :skillGroup))
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil})
+clj꞉sql-playground.core꞉> 
+(filter #(= (:sg_id %) "864abb40-f4d5-11ee-a2c9-d44b4c04da0f") ({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+                                                                {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+                                                                 :name "Fundamental Skill",
+                                                                 :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+                                                                {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+                                                                 :name "Specific Skill",
+                                                                 :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}))
+()
+clj꞉sql-playground.core꞉> 
+(empty? (filter #(= (:sg_id %) "864abb40-f4d5-11ee-a2c9-d44b4c04da0f") (read-table :skillGroup)))
+false
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/add-sg
+clj꞉sql-playground.core꞉> 
+(add-sq "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f" "Thinking Skills")
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:936:1).
+; Unable to resolve symbol: add-sq in this context
+clj꞉sql-playground.core꞉> 
+(add-sg "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f" "Thinking Skills")
+(1)
+clj꞉sql-playground.core꞉> 
+(add-sg "asdas" "test")
+; yatim piatu bos, gaada parentnya.
+nil
+clj꞉sql-playground.core꞉> 
+(read-table :skillGroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(read-all-table)
+({:type "table",
+  :name "skills",
+  :tbl_name "skills",
+  :rootpage 2,
+  :sql "CREATE TABLE skills (skill_id text, name text)"}
+ {:type "table",
+  :name "skillGroup",
+  :tbl_name "skillGroup",
+  :rootpage 4,
+  :sql "CREATE TABLE skillGroup (sg_id text, name text, parent_id text)"})
+clj꞉sql-playground.core꞉> 
+(create-table db "skill_sg_relation" (concat [[:_id :text]] spec/skill-sg-relations-spec))
+(0)
+clj꞉sql-playground.core꞉> 
+(read-all-table)
+({:type "table",
+  :name "skills",
+  :tbl_name "skills",
+  :rootpage 2,
+  :sql "CREATE TABLE skills (skill_id text, name text)"}
+ {:type "table",
+  :name "skillGroup",
+  :tbl_name "skillGroup",
+  :rootpage 4,
+  :sql "CREATE TABLE skillGroup (sg_id text, name text, parent_id text)"}
+ {:type "table",
+  :name "skill_sg_relation",
+  :tbl_name "skill_sg_relation",
+  :rootpage 5,
+  :sql "CREATE TABLE skill_sg_relation (_id text, sg_id text, skill_id text)"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/add-skill
+clj꞉sql-playground.core꞉> 
+(add-sg "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f" "Mathematical thinking")
+(1)
+clj꞉sql-playground.core꞉> 
+(add-skill "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f" "Number sense")
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; no such table: skill
+clj꞉sql-playground.core꞉> 
+(drop-table db "skills")
+; Execution error (ExceptionInfo) at honey.sql/format-ddl-options$iter$fn$fn (sql.cljc:1211).
+; expected symbol or keyword
+clj꞉sql-playground.core꞉> 
+(drop-table db :skills)
+[0]
+clj꞉sql-playground.core꞉> 
+(create-table db :skill spec/skill-spec)
+(0)
+clj꞉sql-playground.core꞉> 
+(add-skill "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f" "Number sense")
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; no such table: skill_sg_relations
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/add-skill
+clj꞉sql-playground.core꞉> 
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+({:_id nil, :sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f", :skill_id "22675090-f4dd-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/add-skill
+clj꞉sql-playground.core꞉> 
+(1)
+clj꞉sql-playground.core꞉> 
+({:_id nil, :sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f", :skill_id "22675090-f4dd-11ee-a2c9-d44b4c04da0f"}
+ {:_id "428ab380-f4dd-11ee-a2c9-d44b4c04da0f",
+  :sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :skill_id "428a8c70-f4dd-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/delete-sg
+clj꞉sql-playground.core꞉> 
+(delete-sg nil)
+[0]
+clj꞉sql-playground.core꞉> 
+(read-table :skillGroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+({:_id nil, :sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f", :skill_id "22675090-f4dd-11ee-a2c9-d44b4c04da0f"}
+ {:_id "428ab380-f4dd-11ee-a2c9-d44b4c04da0f",
+  :sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :skill_id "428a8c70-f4dd-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+[0]
+clj꞉sql-playground.core꞉> 
+(add-sg "e8336990-f4dc-11ee-a2c9-d44b4c04da0f" "salah nih")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skillGroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "25cd6980-f4de-11ee-a2c9-d44b4c04da0f", :name "salah nih", :parent_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(add-skill "25cd6980-f4de-11ee-a2c9-d44b4c04da0f" "skill salah")
+(1)
+clj꞉sql-playground.core꞉> 
+(delete-sg "25cd6980-f4de-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skill)
+({:skill_id "1b2abec0-f4dd-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "22675090-f4dd-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "428a8c70-f4dd-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "3daa44b0-f4de-11ee-a2c9-d44b4c04da0f", :name "skill salah"})
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+({:_id nil, :sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f", :skill_id "22675090-f4dd-11ee-a2c9-d44b4c04da0f"}
+ {:_id "428ab380-f4dd-11ee-a2c9-d44b4c04da0f",
+  :sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :skill_id "428a8c70-f4dd-11ee-a2c9-d44b4c04da0f"}
+ {:_id "3daa6bc0-f4de-11ee-a2c9-d44b4c04da0f",
+  :sg_id "25cd6980-f4de-11ee-a2c9-d44b4c04da0f",
+  :skill_id "3daa44b0-f4de-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(jdbc/delete! db :skill-sg-relation ["_id" "3daa6bc0-f4de-11ee-a2c9-d44b4c04da0f"])
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "-": syntax error
+clj꞉sql-playground.core꞉> 
+(jdbc/delete! db :skill_sg_relation ["_id =?" "3daa6bc0-f4de-11ee-a2c9-d44b4c04da0f"])
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "-": syntax error
+clj꞉sql-playground.core꞉> 
+(jdbc/delete! db "skill_sg_relation" ["_id" "3daa6bc0-f4de-11ee-a2c9-d44b4c04da0f"])
+; Execution error (ArrayIndexOutOfBoundsException) at org.sqlite.PrepStmt/batch (PrepStmt.java:131).
+; Index 0 out of bounds for length 0
+clj꞉sql-playground.core꞉> 
+; Execution error (ArrayIndexOutOfBoundsException) at org.sqlite.PrepStmt/batch (PrepStmt.java:131).
+; Index 0 out of bounds for length 0
+clj꞉sql-playground.core꞉> 
+(1)
+clj꞉sql-playground.core꞉> 
+({:_id nil, :sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f", :skill_id "22675090-f4dd-11ee-a2c9-d44b4c04da0f"}
+ {:_id "428ab380-f4dd-11ee-a2c9-d44b4c04da0f",
+  :sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :skill_id "428a8c70-f4dd-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(jdbc/delete! db "skill_sg_relation" ["_id" nil])
+; Execution error (ArrayIndexOutOfBoundsException) at org.sqlite.PrepStmt/batch (PrepStmt.java:131).
+; Index 0 out of bounds for length 0
+clj꞉sql-playground.core꞉> 
+(jdbc/delete! db :skill_sg_relation ["_id" nil])
+(0)
+clj꞉sql-playground.core꞉> 
+({:_id nil, :sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f", :skill_id "22675090-f4dd-11ee-a2c9-d44b4c04da0f"}
+ {:_id "428ab380-f4dd-11ee-a2c9-d44b4c04da0f",
+  :sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :skill_id "428a8c70-f4dd-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "=": syntax error
+clj꞉sql-playground.core꞉> 
+; Execution error (ArrayIndexOutOfBoundsException) at org.sqlite.PrepStmt/batch (PrepStmt.java:131).
+; Index 0 out of bounds for length 0
+clj꞉sql-playground.core꞉> 
+(read-table :skillGroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(read-table :skill)
+({:skill_id "1b2abec0-f4dd-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "22675090-f4dd-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "428a8c70-f4dd-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "3daa44b0-f4de-11ee-a2c9-d44b4c04da0f", :name "skill salah"})
+clj꞉sql-playground.core꞉> 
+(delete-all-from-table db :skill)
+[4]
+clj꞉sql-playground.core꞉> 
+(delete-all-from-table db :skill-sg-relation)
+[2]
+clj꞉sql-playground.core꞉> 
+(read-table :skill)
+()
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+()
+clj꞉sql-playground.core꞉> 
+(read-table :skillGroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(add-skill "e8336990-f4dc-11ee-a2c9-d44b4c04da0f" "test1 ntar apus")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+({:_id "53d73080-f4df-11ee-a2c9-d44b4c04da0f",
+  :sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :skill_id "53d70970-f4df-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(read-table :skill)
+({:skill_id "53d70970-f4df-11ee-a2c9-d44b4c04da0f", :name "test1 ntar apus"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/delete-skill
+clj꞉sql-playground.core꞉> 
+({:skill_id "53d70970-f4df-11ee-a2c9-d44b4c04da0f", :name "test1 ntar apus"})
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "(": syntax error
+clj꞉sql-playground.core꞉> 
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "(": syntax error
+clj꞉sql-playground.core꞉> 
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; no such table: skill_sg_relations
+clj꞉sql-playground.core꞉> 
+({:_id "53d73080-f4df-11ee-a2c9-d44b4c04da0f",
+  :sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :skill_id "53d70970-f4df-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(delete-skill "53d70970-f4df-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skill)
+()
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+()
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/delete-skill
+clj꞉sql-playground.core꞉> 
+(read-table :skillGroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(add-sg "864abb40-f4d5-11ee-a2c9-d44b4c04da0f" "ini buang")
+(1)
+clj꞉sql-playground.core꞉> 
+; Execution error (ClassCastException) at sql-playground.core/eval11874 (form-init2824694065351499438.clj:1241).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉sql-playground.core꞉> 
+(read-table :skillGroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "53f1a0e0-f4e0-11ee-a2c9-d44b4c04da0f", :name "ini buang", :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(add-sg "53f1a0e0-f4e0-11ee-a2c9-d44b4c04da0f" "ini juga buang sg childnya")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skillGroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "53f1a0e0-f4e0-11ee-a2c9-d44b4c04da0f", :name "ini buang", :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "69966660-f4e0-11ee-a2c9-d44b4c04da0f",
+  :name "ini juga buang sg childnya",
+  :parent_id "53f1a0e0-f4e0-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(delete-sg "53f1a0e0-f4e0-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skillGroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "69966660-f4e0-11ee-a2c9-d44b4c04da0f",
+  :name "ini juga buang sg childnya",
+  :parent_id "53f1a0e0-f4e0-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(delete-sg "69966660-f4e0-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skillgroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/delete-all-from-table
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/drop-table
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/create-table
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near "(": syntax error
+clj꞉sql-playground.core꞉> 
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; no such table: skill_sg_relations
+clj꞉sql-playground.core꞉> 
+()
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/delete-sg
+clj꞉sql-playground.core꞉> 
+(add-sg "864abb40-f4d5-11ee-a2c9-d44b4c04da0f" "TBDeleted")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skillgroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "2cf95cb0-f4e2-11ee-a2c9-d44b4c04da0f", :name "TBDeleted", :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(add-sg "2cf95cb0-f4e2-11ee-a2c9-d44b4c04da0f" "Bakalan diapus neh sg-nya")
+(1)
+clj꞉sql-playground.core꞉> 
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "2cf95cb0-f4e2-11ee-a2c9-d44b4c04da0f", :name "TBDeleted", :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "4335f560-f4e2-11ee-a2c9-d44b4c04da0f",
+  :name "Bakalan diapus neh sg-nya",
+  :parent_id "2cf95cb0-f4e2-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(add-skill "4335f560-f4e2-11ee-a2c9-d44b4c04da0f" "skill1buang")
+(1)
+clj꞉sql-playground.core꞉> 
+(add-skill "4335f560-f4e2-11ee-a2c9-d44b4c04da0f" "TBOrphaned")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skill)
+({:skill_id "4f91b740-f4e2-11ee-a2c9-d44b4c04da0f", :name "skill1buang"}
+ {:skill_id "57496c80-f4e2-11ee-a2c9-d44b4c04da0f", :name "TBOrphaned"})
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+({:_id "4f91de50-f4e2-11ee-a2c9-d44b4c04da0f",
+  :sg_id "4335f560-f4e2-11ee-a2c9-d44b4c04da0f",
+  :skill_id "4f91b740-f4e2-11ee-a2c9-d44b4c04da0f"}
+ {:_id "57499390-f4e2-11ee-a2c9-d44b4c04da0f",
+  :sg_id "4335f560-f4e2-11ee-a2c9-d44b4c04da0f",
+  :skill_id "57496c80-f4e2-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(delete-sg "2cf95cb0-f4e2-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skillgroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "4335f560-f4e2-11ee-a2c9-d44b4c04da0f",
+  :name "Bakalan diapus neh sg-nya",
+  :parent_id "2cf95cb0-f4e2-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(read-tabe :skill-sg-relation)
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:1419:1).
+; Unable to resolve symbol: read-tabe in this context
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+({:_id "4f91de50-f4e2-11ee-a2c9-d44b4c04da0f",
+  :sg_id "4335f560-f4e2-11ee-a2c9-d44b4c04da0f",
+  :skill_id "4f91b740-f4e2-11ee-a2c9-d44b4c04da0f"}
+ {:_id "57499390-f4e2-11ee-a2c9-d44b4c04da0f",
+  :sg_id "4335f560-f4e2-11ee-a2c9-d44b4c04da0f",
+  :skill_id "57496c80-f4e2-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/delete-sg
+clj꞉sql-playground.core꞉> 
+(delete-sg "4335f560-f4e2-11ee-a2c9-d44b4c04da0f")
+()
+clj꞉sql-playground.core꞉> 
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "4335f560-f4e2-11ee-a2c9-d44b4c04da0f",
+  :name "Bakalan diapus neh sg-nya",
+  :parent_id "2cf95cb0-f4e2-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+({:_id "4f91de50-f4e2-11ee-a2c9-d44b4c04da0f",
+  :sg_id "4335f560-f4e2-11ee-a2c9-d44b4c04da0f",
+  :skill_id "4f91b740-f4e2-11ee-a2c9-d44b4c04da0f"}
+ {:_id "57499390-f4e2-11ee-a2c9-d44b4c04da0f",
+  :sg_id "4335f560-f4e2-11ee-a2c9-d44b4c04da0f",
+  :skill_id "57496c80-f4e2-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(read-table :skill)
+({:skill_id "4f91b740-f4e2-11ee-a2c9-d44b4c04da0f", :name "skill1buang"}
+ {:skill_id "57496c80-f4e2-11ee-a2c9-d44b4c04da0f", :name "TBOrphaned"})
+clj꞉sql-playground.core꞉> 
+(read-table :skillgroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "4335f560-f4e2-11ee-a2c9-d44b4c04da0f",
+  :name "Bakalan diapus neh sg-nya",
+  :parent_id "2cf95cb0-f4e2-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(delete-sg "4335f560-f4e2-11ee-a2c9-d44b4c04da0f")
+()
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/delete-sg
+clj꞉sql-playground.core꞉> 
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skillgroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+({:_id "4f91de50-f4e2-11ee-a2c9-d44b4c04da0f",
+  :sg_id "4335f560-f4e2-11ee-a2c9-d44b4c04da0f",
+  :skill_id "4f91b740-f4e2-11ee-a2c9-d44b4c04da0f"}
+ {:_id "57499390-f4e2-11ee-a2c9-d44b4c04da0f",
+  :sg_id "4335f560-f4e2-11ee-a2c9-d44b4c04da0f",
+  :skill_id "57496c80-f4e2-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\src\sql_playground\core.clj:126:39).
+; Unable to resolve symbol: sg-id in this context
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/delete-sg
+clj꞉sql-playground.core꞉> 
+(2)
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+()
+clj꞉sql-playground.core꞉> 
+(read-table :skillgroup)
+({:sg_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(read-table :skill)
+({:skill_id "4f91b740-f4e2-11ee-a2c9-d44b4c04da0f", :name "skill1buang"}
+ {:skill_id "57496c80-f4e2-11ee-a2c9-d44b4c04da0f", :name "TBOrphaned"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/delete-sg
+clj꞉sql-playground.core꞉> 
+(delete-sq "864abb40-f4d5-11ee-a2c9-d44b4c04da0f")
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\.calva\output-window\output.calva-repl:1544:1).
+; Unable to resolve symbol: delete-sq in this context
+clj꞉sql-playground.core꞉> 
+(delete-sg "864abb40-f4d5-11ee-a2c9-d44b4c04da0f")
+(0)
+clj꞉sql-playground.core꞉> 
+(read-table :skillgroup)
+({:sg_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc52abd0-f4d5-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "864abb40-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b325bbb0-f4d5-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e8336990-f4dc-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "26aaea80-f4d9-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/delete-sg
+clj꞉sql-playground.core꞉> 
+(0)
+clj꞉sql-playground.core꞉> 
+(read-table :skillGroup)
+()
+clj꞉sql-playground.core꞉> 
+(read-table :skill)
+({:skill_id "4f91b740-f4e2-11ee-a2c9-d44b4c04da0f", :name "skill1buang"}
+ {:skill_id "57496c80-f4e2-11ee-a2c9-d44b4c04da0f", :name "TBOrphaned"})
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+()
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/orphaned-skill
+clj꞉sql-playground.core꞉> 
+(orphaned-skill)
+({:skill_id "4f91b740-f4e2-11ee-a2c9-d44b4c04da0f", :name "skill1buang"}
+ {:skill_id "57496c80-f4e2-11ee-a2c9-d44b4c04da0f", :name "TBOrphaned"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/add-skill
+clj꞉sql-playground.core꞉> 
+(add-sg nil "root")
+; yatim piatu bos, gaada parentnya.
+nil
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/add-sg-root
+clj꞉sql-playground.core꞉> 
+(add-sg-root)
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skillgroup)
+({:sg_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil})
+clj꞉sql-playground.core꞉> 
+(add-sg "a132f850-f4ee-11ee-a2c9-d44b4c04da0f" "Fundamental Skill")
+(1)
+clj꞉sql-playground.core꞉> 
+(add-sg "a132f850-f4ee-11ee-a2c9-d44b4c04da0f" "Specific Skill")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skillgroup)
+; Execution error (ArityException) at sql-playground.core/eval12527 (form-init2824694065351499438.clj:1605).
+; Wrong number of args (0) passed to: sql-playground.core/read-table
+clj꞉sql-playground.core꞉> 
+({:sg_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(add-sg "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f" "Thinking Skills")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skillgroup)
+({:sg_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(add-sg "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f" "Mathematical thinking")
+(1)
+clj꞉sql-playground.core꞉> 
+(add-sg "bc109060-f4ee-11ee-a2c9-d44b4c04da0f" "Econs (for test)")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skillgroup)
+({:sg_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Econs (for test)",
+  :parent_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(add-skill "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f" "Number sense")
+(1)
+clj꞉sql-playground.core꞉> 
+(add-skill "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f" "Number sense")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skill)
+({:skill_id "4f91b740-f4e2-11ee-a2c9-d44b4c04da0f", :name "skill1buang"}
+ {:skill_id "57496c80-f4e2-11ee-a2c9-d44b4c04da0f", :name "TBOrphaned"}
+ {:skill_id "11919a20-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+({:_id nil, :sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f", :skill_id "11919a20-f4ef-11ee-a2c9-d44b4c04da0f"}
+ {:_id nil, :sg_id "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f", :skill_id nil})
+clj꞉sql-playground.core꞉> 
+(delete-all-from-table :skill-sg-relation)
+[2]
+clj꞉sql-playground.core꞉> 
+(delete-all-from-table :skill)
+[3]
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/add-skill
+clj꞉sql-playground.core꞉> 
+(add-skill "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f" "Number sense")
+(1)
+clj꞉sql-playground.core꞉> 
+(add-skill "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f" "Number sense")
+(1)
+clj꞉sql-playground.core꞉> 
+(read-table :skill)
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+({:_id "b628c3b0-f4ef-11ee-a2c9-d44b4c04da0f",
+  :sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f",
+  :skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f"}
+ {:_id "c37db2a0-f4ef-11ee-a2c9-d44b4c04da0f",
+  :sg_id "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f",
+  :skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/skills-by-sgid
+clj꞉sql-playground.core꞉> 
+(add-skill )#'sql-playground.core/skills-by-sgid
+clj꞉sql-playground.core꞉> 
+(map #(add-skill "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f" %) ["Ngitung" "Ngotakin" "Judi"])
+((1) (1) (1))
+clj꞉sql-playground.core꞉> 
+((read-table :skill))
+; Execution error (ClassCastException) at sql-playground.core/eval12779 (form-init2824694065351499438.clj:1703).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉sql-playground.core꞉> 
+(read-table :skill)
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"})
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f")
+(({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+ ({:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"})
+ ({:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"})
+ ({:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"}))
+clj꞉sql-playground.core꞉> 
+(flatten (({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+          ({:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"})
+          ({:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"})
+          ({:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"})))
+; Execution error (ArityException) at sql-playground.core/eval12785 (form-init2824694065351499438.clj:1719).
+; Wrong number of args (0) passed to: clojure.lang.PersistentArrayMap
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/skills-by-sgid
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f")
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"})
+clj꞉sql-playground.core꞉> 
+({:sg_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Econs (for test)",
+  :parent_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/all-skill-group
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/all-skill
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/disconnect-skill
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/connect-skill
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/disconnect-reconnect-skill
+clj꞉sql-playground.core꞉> 
+(disconnect-skill "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f" "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f")
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"})
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f")
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+clj꞉sql-playground.core꞉> 
+(connect-skill "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f" "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f")
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"})
+clj꞉sql-playground.core꞉> 
+(disconnect-reconnect-skill "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f" "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f" "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f")
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/connect-skill
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/disconnect-reconnect-skill
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/disconnect-reconnect-skill
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/connect-skill
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/disconnect-skill
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f")
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+clj꞉sql-playground.core꞉> 
+(disconnect-reconnect-skill "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f" "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f" "b6276420-f4ef-11ee-a2c9-d44b4c04da0f")
+; Execution error (ClassCastException) at sql-playground.core/connect-skill (form-init2824694065351499438.clj:153).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/connect-skill
+clj꞉sql-playground.core꞉> 
+(1)
+clj꞉sql-playground.core꞉> 
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"})
+clj꞉sql-playground.core꞉> 
+; gaada bos skill di sg-nya
+nil
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f")
+; gaada bos skill di sg-nya
+nil
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f")
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"})
+clj꞉sql-playground.core꞉> 
+(connect-skill "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f" "b6276420-f4ef-11ee-a2c9-d44b4c04da0f")
+; skill udah ada di sg ini bos.
+nil
+clj꞉sql-playground.core꞉> 
+(disconnect-reconnect-skill "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f" "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f" "b6276420-f4ef-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+({:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"})
+clj꞉sql-playground.core꞉> 
+; gaada bos skill di sg-nya
+nil
+clj꞉sql-playground.core꞉> 
+; gaada bos skill di sg-nya
+nil
+clj꞉sql-playground.core꞉> 
+(orphaned-skill)
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+clj꞉sql-playground.core꞉> 
+; Syntax error reading source at (REPL:132:51).
+; Nested #()s are not allowed
+clj꞉sql-playground.core꞉> 
+(read-table :skill-sg-relation)
+({:_id "7b608490-f4f2-11ee-a2c9-d44b4c04da0f",
+  :sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f",
+  :skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f"}
+ {:_id "7b68c1f0-f4f2-11ee-a2c9-d44b4c04da0f",
+  :sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f",
+  :skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f"}
+ {:_id "5d2ae080-f4f5-11ee-a2c9-d44b4c04da0f",
+  :sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f",
+  :skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f"}
+ {:_id "8c706660-f4f7-11ee-a2c9-d44b4c04da0f", :sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f", :skill_id "0"}
+ {:_id "eba4ce50-f4f7-11ee-a2c9-d44b4c04da0f", :sg_id "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f", :skill_id "1"})
+clj꞉sql-playground.core꞉> 
+(connect-skill "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f" "b6276420-f4ef-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f")
+({:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"}
+ {:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+clj꞉sql-playground.core꞉> 
+(orphaned-skill)
+()
+clj꞉sql-playground.core꞉> 
+(disconnect-reconnect-skill "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f" "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f" "b6276420-f4ef-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f")
+; gaada bos skill di sg-nya
+nil
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f")
+({:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"})
+clj꞉sql-playground.core꞉> 
+(orphaned-skill)
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+clj꞉sql-playground.core꞉> 
+(connect-skill "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f" "b6276420-f4ef-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+({:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"}
+ {:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/disconnect-reconnect-skill
+clj꞉sql-playground.core꞉> 
+(orphaned-skill)
+()
+clj꞉sql-playground.core꞉> 
+({:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"}
+ {:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f")
+; gaada bos skill di sg-nya
+nil
+clj꞉sql-playground.core꞉> 
+(orphaned-skill)
+()
+clj꞉sql-playground.core꞉> 
+(disconnect-reconnect-skill "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f" "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f" "b6276420-f4ef-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+clj꞉sql-playground.core꞉> 
+({:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/disconnect-reconnect-skill
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/disconnect-reconnect-skill
+clj꞉sql-playground.core꞉> 
+(orphaned-skill)
+()
+clj꞉sql-playground.core꞉> 
+(add-skill "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f" "Number sense")
+(1)
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f")
+({:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"}
+ {:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+clj꞉sql-playground.core꞉> 
+(disconnect-reconnect-skill "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f" "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f" "b6276420-f4ef-11ee-a2c9-d44b4c04da0f")
+; gajadi disconnect-reconnect bos, soalnya skill udah ada di new sg.
+nil
+clj꞉sql-playground.core꞉> 
+({:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"}
+ {:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+clj꞉sql-playground.core꞉> 
+(skills-by-sgid "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f")
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"})
+clj꞉sql-playground.core꞉> 
+()
+clj꞉sql-playground.core꞉> 
+(all-skill-group)
+({:sg_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Econs (for test)",
+  :parent_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/reparent-sg
+clj꞉sql-playground.core꞉> 
+(reparent-sg "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f" "a132f850-f4ee-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/all-child-sg
+clj꞉sql-playground.core꞉> 
+(all-child-sg "a132f850-f4ee-11ee-a2c9-d44b4c04da0f")
+({:sg_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Econs (for test)",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(reparent-sg "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f" "bc109060-f4ee-11ee-a2c9-d44b4c04da0f")
+(1)
+clj꞉sql-playground.core꞉> 
+(all-child-sg "a132f850-f4ee-11ee-a2c9-d44b4c04da0f")
+({:sg_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(all-child-sg "bc109060-f4ee-11ee-a2c9-d44b4c04da0f")
+({:sg_id "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Econs (for test)",
+  :parent_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/update-sg
+clj꞉sql-playground.core꞉> 
+; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\Documents\GitHub\sql-playground\src\sql_playground\core.clj:197:19).
+; Unable to resolve symbol: new-name in this context
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/update-skill
+clj꞉sql-playground.core꞉> 
+(all-skill)
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"})
+clj꞉sql-playground.core꞉> 
+(update-skill "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f" "Ngitung + Ngaji")
+(1)
+clj꞉sql-playground.core꞉> 
+(all-skill)
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung + Ngaji"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"})
+clj꞉sql-playground.core꞉> 
+(update-sg "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f" "Econs go brrr")
+(1)
+clj꞉sql-playground.core꞉> 
+(all-skill-group)
+({:sg_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Econs go brrr",
+  :parent_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/find-skill
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/find-sg
+clj꞉sql-playground.core꞉> 
+(find-sg "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f")
+({:sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(find-skill "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f")
+({:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung + Ngaji"})
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/find-skill
+clj꞉sql-playground.core꞉> 
+#'sql-playground.core/find-sg
+clj꞉sql-playground.core꞉> 
+(add-sg "a132f850-f4ee-11ee-a2c9-d44b4c04da0f" "skill ngaco")
+; Execution error (ArityException) at sql-playground.core/eval13041 (form-init2824694065351499438.clj:2065).
+; Wrong number of args (1) passed to: sql-playground.core/add-sg
+clj꞉sql-playground.core꞉> 
+(1)
+clj꞉sql-playground.core꞉> 
+(all-skill-group)
+({:sg_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Econs go brrr",
+  :parent_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "85e6fe50-f4ff-11ee-a2c9-d44b4c04da0f",
+  :name "skill ngaco",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(add-sg "85e6fe50-f4ff-11ee-a2c9-d44b4c04da0f" "sub skill ngaco 1")
+(1)
+clj꞉sql-playground.core꞉> 
+(add-sg "85e6fe50-f4ff-11ee-a2c9-d44b4c04da0f" "sub skill ngaco 2")
+(1)
+clj꞉sql-playground.core꞉> 
+(all-skill-group)
+({:sg_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Econs go brrr",
+  :parent_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "85e6fe50-f4ff-11ee-a2c9-d44b4c04da0f",
+  :name "skill ngaco",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "9d556040-f4ff-11ee-a2c9-d44b4c04da0f",
+  :name "sub skill ngaco 1",
+  :parent_id "85e6fe50-f4ff-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "a52139c0-f4ff-11ee-a2c9-d44b4c04da0f",
+  :name "sub skill ngaco 2",
+  :parent_id "85e6fe50-f4ff-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(#(add-skill % "perintilan 1") ["9d556040-f4ff-11ee-a2c9-d44b4c04da0f" "a52139c0-f4ff-11ee-a2c9-d44b4c04da0f"])
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near ",": syntax error
+clj꞉sql-playground.core꞉> 
+(add-skill "9d556040-f4ff-11ee-a2c9-d44b4c04da0f" "ngaco spesifik 1")
+(1)
+clj꞉sql-playground.core꞉> 
+(add-skill "a52139c0-f4ff-11ee-a2c9-d44b4c04da0f" "ngaco spesifik 1")
+(1)
+clj꞉sql-playground.core꞉> 
+(#(add-skill % %2) ["9d556040-f4ff-11ee-a2c9-d44b4c04da0f" "a52139c0-f4ff-11ee-a2c9-d44b4c04da0f"] ["ngaco sama 1" "ngaco sama 2"])
+(* 1 1)clj꞉sql-playground.core꞉> 
+
+clj꞉sql-playground.core꞉> 
+(#(add-skill % %2) ["9d556040-f4ff-11ee-a2c9-d44b4c04da0f" "a52139c0-f4ff-11ee-a2c9-d44b4c04da0f"] ["ngaco sama 1" "ngaco sama 2"])
+(*1 1)
+clj꞉sql-playground.core꞉> 
+; ERROR:
+clj꞉sql-playground.core꞉> 
+1
+1
+clj꞉sql-playground.core꞉> 
+; Execution error (SQLException) at org.sqlite.DB/throwex (DB.java:288).
+; near ",": syntax error
+; Execution error (ClassCastException) at sql-playground.core/eval13113 (form-init2824694065351499438.clj:2140).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉sql-playground.core꞉> 
+; 
+; ERROR:
+(all-skill)
+({:skill_id "b6276420-f4ef-11ee-a2c9-d44b4c04da0f", :name "Number sense"}
+ {:skill_id "7b5f7320-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngitung + Ngaji"}
+ {:skill_id "7b67d790-f4f2-11ee-a2c9-d44b4c04da0f", :name "Ngotakin"}
+ {:skill_id "7b6d2ec0-f4f2-11ee-a2c9-d44b4c04da0f", :name "Judi"}
+ {:skill_id "ca44fa20-f4ff-11ee-a2c9-d44b4c04da0f", :name "perintilan 1"}
+ {:skill_id "e5693820-f4ff-11ee-a2c9-d44b4c04da0f", :name "ngaco spesifik 1"})
+clj꞉sql-playground.core꞉> 
+(all-skill-group)
+({:sg_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Econs go brrr",
+  :parent_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "85e6fe50-f4ff-11ee-a2c9-d44b4c04da0f",
+  :name "skill ngaco",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "9d556040-f4ff-11ee-a2c9-d44b4c04da0f",
+  :name "sub skill ngaco 1",
+  :parent_id "85e6fe50-f4ff-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "a52139c0-f4ff-11ee-a2c9-d44b4c04da0f",
+  :name "sub skill ngaco 2",
+  :parent_id "85e6fe50-f4ff-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(delete-sg "85e6fe50-f4ff-11ee-a2c9-d44b4c04da0f")
+(0)
+clj꞉sql-playground.core꞉> 
+({:sg_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f", :name "root", :parent_id nil}
+ {:sg_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Fundamental Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Specific Skill",
+  :parent_id "a132f850-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Thinking Skills",
+  :parent_id "b274fff0-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "e72b9150-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Mathematical thinking",
+  :parent_id "d8fee000-f4ee-11ee-a2c9-d44b4c04da0f"}
+ {:sg_id "f3d7bd20-f4ee-11ee-a2c9-d44b4c04da0f",
+  :name "Econs go brrr",
+  :parent_id "bc109060-f4ee-11ee-a2c9-d44b4c04da0f"})
+clj꞉sql-playground.core꞉> 
+(orphaned-skill)
+({:skill_id "ca44fa20-f4ff-11ee-a2c9-d44b4c04da0f", :name "perintilan 1"}
+ {:skill_id "e5693820-f4ff-11ee-a2c9-d44b4c04da0f", :name "ngaco spesifik 1"})
+clj꞉sql-playground.core꞉> 
+; nREPL Connection was closed
